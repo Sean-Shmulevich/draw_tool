@@ -5,7 +5,8 @@ export default defineConfig({
     test: {
         globals: true,
         include: [
-            "src/tests/unit/**",   // 👈 prevent Vitest from touching Playwright tests
+            "src/tests/unit/**",
+            "src/tests/integration/**",
         ],
     },
 });

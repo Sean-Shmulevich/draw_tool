@@ -4,9 +4,8 @@ export default defineConfig({
     base: "/draw_tool/",
     test: {
         globals: true,
-        exclude: [
-            "node_modules",
-            "src/tests/e2e/**",   // 👈 prevent Vitest from touching Playwright tests
+        include: [
+            "src/tests/unit/**",   // 👈 prevent Vitest from touching Playwright tests
         ],
     },
 });

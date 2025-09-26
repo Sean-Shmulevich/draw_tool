@@ -1,9 +1,9 @@
 import { describe, it, expect } from "vitest";
-import { handleKeyTyped, handleKeyPressed } from "../pen";
+import { handleKeyTyped, handleKeyPressed } from "../../pen";
 
 describe("pen logic", () => {
   it("changes pen state on key typed", () => {
-    let config = { size: 1, state: 0 };
+    let config: any = { size: 1, state: 0 };
 
     config = handleKeyTyped("e", config);
     expect(config.state).toBe(1);
@@ -17,7 +17,7 @@ describe("pen logic", () => {
 
   it("increases/decreases pen size on arrow keys", () => {
     const LEFT = "ArrowLeft", RIGHT = "ArrowRight"; // standard codes
-    let config = { size: 5, state: 0 };
+    let config: any = { size: 5, state: 0 };
 
     config = handleKeyPressed(LEFT, config);
     expect(config.size).toBe(4);
